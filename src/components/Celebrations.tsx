@@ -2,8 +2,8 @@ import { invite } from '../data/invite'
 import { Reveal } from './Reveal'
 
 const items = [
-  { ...invite.reception, label: 'Reception', image: '/media/couple-smile.jpg', position: '50% 30%' },
-  { ...invite.event, label: 'Wedding', image: '/media/couple-gate.jpg', position: '65% 30%' },
+  { ...invite.reception, label: 'Reception', image: '/media/couple-smile.jpg', position: '50% 40%' },
+  { ...invite.event, label: 'Wedding', image: '/media/couple-portrait.jpg', position: '50% 14%' },
 ]
 
 export function Celebrations() {
@@ -30,7 +30,7 @@ export function Celebrations() {
                         width={1600}
                         height={1066}
                         style={{ objectPosition: s.position }}
-                        className="h-48 w-full object-cover transition-transform duration-[1.4s] ease-out hover:scale-105 sm:h-56"
+                        className="aspect-[3/2] w-full object-cover transition-transform duration-[1.4s] ease-out hover:scale-105"
                       />
                     </div>
                   </div>
