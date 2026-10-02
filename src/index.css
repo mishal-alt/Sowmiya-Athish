@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --sage: oklch(74% 0.032 165);
+  --sage-deep: oklch(60% 0.04 168);
+  --pine: oklch(42% 0.042 168);
+  --parchment: oklch(95.8% 0.018 88);
+  --parchment-deep: oklch(91.5% 0.028 86);
+  --gold: oklch(72% 0.092 85);
+  --gold-soft: oklch(84% 0.06 88);
+  --lotus: oklch(74% 0.088 8);
+  --ink: oklch(34% 0.028 62);
+}
+
+@theme inline {
+  --font-sans: "Karla", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-pine: var(--pine);
+  --color-parchment: var(--parchment);
+  --color-parchment-deep: var(--parchment-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-lotus: var(--lotus);
+  --color-ink: var(--ink);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@utility gold-rule {
+  background: linear-gradient(to right, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  height: 1px;
+  position: relative;
+  &::after {
+    content: "";
+    background: var(--gold);
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+  }
+}
+
+@utility paper-grain {
+  position: relative;
+  &::before {
+    content: "";
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--ink) 6%, transparent), transparent 55%),
+      radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--ink) 5%, transparent), transparent 50%);
+  }
+}
+
+.petal {
+  animation: petal-fall var(--dur, 18s) linear var(--delay, 0s) infinite;
+}
+
+@keyframes petal-fall {
+  0% { opacity: 0; transform: translateY(-10vh) rotate(0); }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.6; }
+  100% { transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(360deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal { animation: none; display: none; }
+}
