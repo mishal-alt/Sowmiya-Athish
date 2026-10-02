@@ -39,9 +39,9 @@ export const invite = {
     mapsQuery: 'K.R. Mahal, Keeleripatti, Anangur Road, Thiruchengode',
   },
   gallery: [
-    { src: '/media/couple-smile.jpg', alt: 'Sowmiya and Athish smiling at each other by the garden gate' },
-    { src: '/media/couple-portrait.jpg', alt: 'Sowmiya and Athish laughing together' },
-    { src: '/media/couple-gate.jpg', alt: 'Athish embracing Sowmiya from behind' },
+    { src: '/media/couple-smile.jpg', alt: 'Sowmiya and Athish smiling at each other by the garden gate', position: '50% 40%' },
+    { src: '/media/couple-portrait.jpg', alt: 'Sowmiya and Athish laughing together', position: '50% 4%' },
+    { src: '/media/couple-gate.jpg', alt: 'Athish embracing Sowmiya from behind', position: '60% 40%' },
   ],
   blessing: {
     line: 'May your intentions be one, may your hearts beat as one.',

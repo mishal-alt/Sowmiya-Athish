@@ -21,7 +21,13 @@ export function Moments() {
             onClick={() => setActive(i)}
             className="relative w-[72vw] max-w-xs shrink-0 snap-center overflow-hidden rounded-t-[3rem] border border-gold/45 transition-transform duration-300 active:scale-[0.97]"
           >
-            <img src={g.src} alt={g.alt} loading="lazy" width={1024} height={1024} className="h-72 w-full object-cover" />
+            <img
+              src={g.src}
+              alt={g.alt}
+              loading="lazy"
+              style={{ objectPosition: g.position }}
+              className="h-72 w-full object-cover"
+            />
             <span className="pointer-events-none absolute inset-2 rounded-t-[2.7rem] border border-parchment/40" />
           </button>
         ))}
