@@ -19,7 +19,7 @@ export function Footer() {
       <div aria-hidden className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-parchment to-transparent" />
       <Reveal className="px-6">
         <p className="font-display text-3xl tracking-[0.16em] text-pine uppercase">
-          {couple.brideShort} <span className="text-gold">&amp;</span> {couple.groomShort}
+          {couple.groomShort} <span className="text-gold">&amp;</span> {couple.brideShort}
         </p>
         <div className="mx-auto mt-5 w-24 gold-rule" />
         <p className="mt-6 text-sm text-ink/80">{footer.families}</p>

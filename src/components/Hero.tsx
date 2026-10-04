@@ -35,13 +35,13 @@ export function Hero() {
       className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden bg-parchment"
     >
       <AuroraLayer />
-      <motion.div style={{ y: imgY }} className="absolute -top-10 inset-x-0 bottom-0">
+      <motion.div style={{ y: imgY }} className="absolute -top-10 inset-x-0 bottom-[34%] sm:bottom-0">
         <img
-          src="/media/couple-portrait.jpg"
-          alt="Sowmiya and Athish laughing together by a garden gate"
-          width={1066}
-          height={1600}
-          className="h-full w-full object-cover object-top"
+          src="/media/opening.jpg"
+          alt="Athish and Sowmiya in a quiet, smiling embrace"
+          width={1800}
+          height={1200}
+          className="h-full w-full object-cover object-[40%_30%] sm:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-pine/25 via-transparent via-40% to-parchment" />
       </motion.div>
@@ -62,9 +62,9 @@ export function Hero() {
           transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mt-4 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
         >
-          {couple.brideShort}
-          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">and</span>
           {couple.groomShort}
+          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">and</span>
+          {couple.brideShort}
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, scaleX: 0.4 }}

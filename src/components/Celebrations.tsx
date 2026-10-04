@@ -2,8 +2,9 @@ import { invite } from '../data/invite'
 import { Reveal } from './Reveal'
 
 const items = [
-  { ...invite.reception, label: 'Reception', image: '/media/couple-smile.jpg', position: '50% 40%' },
-  { ...invite.event, label: 'Wedding', image: '/media/couple-portrait.jpg', position: '50% 14%' },
+  { ...invite.pattiniSeer, label: 'Pattini Seer', image: '/media/event-pattini-seer.jpg', position: '50% 30%' },
+  { ...invite.reception, label: 'Reception', image: '/media/event-reception.jpg', position: '50% 25%' },
+  { ...invite.event, label: 'Wedding', image: '/media/event-wedding.jpg', position: '50% 30%' },
 ]
 
 export function Celebrations() {
@@ -25,7 +26,7 @@ export function Celebrations() {
                     <div className="overflow-hidden rounded-t-[3rem] border border-gold/40">
                       <img
                         src={s.image}
-                        alt={`Sowmiya and Athish — ${s.label}`}
+                        alt={`Athish and Sowmiya — ${s.label}`}
                         loading="lazy"
                         width={1600}
                         height={1066}

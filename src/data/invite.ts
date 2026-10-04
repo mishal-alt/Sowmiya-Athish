@@ -1,22 +1,22 @@
 /** All site copy lives here. Swap photos in public/media. */
 export const invite = {
   couple: {
-    bride: 'A. Sowmiya',
-    brideShort: 'Sowmiya',
     groom: 'M. Athish Karthic',
     groomShort: 'Athish',
-    hashtag: '#SowmiyaAthish',
+    bride: 'A. Sowmiya',
+    brideShort: 'Sowmiya',
+    hashtag: '#AthishSowmiya',
   },
   families: {
-    bride: { father: 'Mr. R. Arunachalam', mother: 'Mrs. A. Thamilarasi' },
     groom: { father: 'Mr. K. Muthusamy', mother: 'Mrs. M. Nirmala' },
+    bride: { father: 'Mr. R. Arunachalam', mother: 'Mrs. A. Thamilarasi' },
   },
   invite: {
     kicker: 'Together with their families',
     line: 'cordially invite you to celebrate their wedding',
   },
   event: {
-    title: 'Wedding of A. Sowmiya & M. Athish Karthic',
+    title: 'Wedding of M. Athish Karthic & A. Sowmiya',
     startsAt: '2026-11-15T06:00:00+05:30',
     endsAt: '2026-11-15T07:25:00+05:30',
     dateLabel: '15 . 11 . 2026',
@@ -24,8 +24,17 @@ export const invite = {
     dayLabel: 'Sunday',
     timeLabel: '6:00 am to 7:25 am',
   },
+  pattiniSeer: {
+    title: 'Pattini Seer of M. Athish Karthic & A. Sowmiya',
+    startsAt: '2026-11-14T12:15:00+05:30',
+    endsAt: '2026-11-14T13:15:00+05:30',
+    dateLabel: '14 . 11 . 2026',
+    longDate: 'Saturday, 14 November 2026',
+    dayLabel: 'Saturday',
+    timeLabel: '12:15 pm to 1:15 pm',
+  },
   reception: {
-    title: 'Reception of A. Sowmiya & M. Athish Karthic',
+    title: 'Reception of M. Athish Karthic & A. Sowmiya',
     startsAt: '2026-11-14T18:00:00+05:30',
     endsAt: '2026-11-14T21:00:00+05:30',
     dateLabel: '14 . 11 . 2026',
@@ -39,9 +48,9 @@ export const invite = {
     mapsQuery: 'K.R. Mahal, Keeleripatti, Anangur Road, Thiruchengode',
   },
   gallery: [
-    { src: '/media/couple-smile.jpg', alt: 'Sowmiya and Athish smiling at each other by the garden gate', position: '50% 40%' },
-    { src: '/media/couple-portrait.jpg', alt: 'Sowmiya and Athish laughing together', position: '50% 4%' },
-    { src: '/media/couple-gate.jpg', alt: 'Athish embracing Sowmiya from behind', position: '60% 40%' },
+    { src: '/media/moment-1.jpg', alt: 'Athish and Sowmiya laughing together by a garden railing', position: '50% 40%' },
+    { src: '/media/moment-2.jpg', alt: 'Sowmiya looking up and laughing at Athish', position: '50% 25%' },
+    { src: '/media/moment-3.jpg', alt: 'Silhouette of Athish and Sowmiya against a golden glow', position: '50% 40%' },
   ],
   blessing: {
     line: 'May your intentions be one, may your hearts beat as one.',

@@ -3,7 +3,7 @@ import { calendarUrl, invite, mapsDirectionsUrl } from '../data/invite'
 import { Reveal } from './Reveal'
 
 export function EventDetails() {
-  const { event, reception, venue } = invite
+  const { event, pattiniSeer, reception, venue } = invite
   return (
     <section className="relative overflow-hidden px-5 py-20">
       <div
@@ -34,6 +34,14 @@ export function EventDetails() {
           </ul>
 
           <div className="mx-auto mt-8 w-16 gold-rule" />
+          <p className="mt-6 text-[0.62rem] tracking-[0.4em] text-ink/60 uppercase">Pattini Seer</p>
+          <p className="mt-2 font-display text-2xl tracking-[0.1em] text-gold">{pattiniSeer.dateLabel}</p>
+          <p className="mt-2 text-sm text-ink/80">
+            {pattiniSeer.dayLabel}, {pattiniSeer.timeLabel}
+          </p>
+          <p className="mt-1 text-sm text-ink/60">{venue.name}</p>
+
+          <div className="mx-auto mt-8 w-16 gold-rule" />
           <p className="mt-6 text-[0.62rem] tracking-[0.4em] text-ink/60 uppercase">Reception</p>
           <p className="mt-2 font-display text-2xl tracking-[0.1em] text-gold">{reception.dateLabel}</p>
           <p className="mt-2 text-sm text-ink/80">
@@ -50,6 +58,14 @@ export function EventDetails() {
             >
               <CalendarPlus className="size-4 transition-transform group-hover:rotate-6" />
               Add wedding to calendar
+            </a>
+            <a
+              href={calendarUrl(pattiniSeer)}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-gold/60 py-3 text-[0.65rem] tracking-[0.2em] text-ink/75 uppercase transition-colors hover:bg-gold/10"
+            >
+              Add pattini seer to calendar
             </a>
             <a
               href={calendarUrl(reception)}
