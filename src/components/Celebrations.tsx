@@ -4,7 +4,7 @@ import { Reveal } from './Reveal'
 const items = [
   { ...invite.pattiniSeer, label: 'Pattini Seer', image: '/media/event-pattini-seer.jpg', position: '50% 30%' },
   { ...invite.reception, label: 'Reception', image: '/media/event-reception.jpg', position: '50% 25%' },
-  { ...invite.event, label: 'Wedding', image: '/media/event-wedding.jpg', position: '50% 30%' },
+  { ...invite.event, label: 'Wedding', image: '/media/event-wedding.jpg', position: '50% 12%' },
 ]
 
 export function Celebrations() {
