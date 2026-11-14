@@ -37,18 +37,20 @@ export function Footer() {
         </div>
         <p className="mt-10 text-[0.6rem] tracking-[0.32em] text-ink/60 uppercase">{couple.hashtag}</p>
       </Reveal>
-      <a
-        href="https://www.instagram.com/zetron.tech"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Zetron Tech on Instagram"
-        className="mt-10 inline-flex items-center justify-center gap-2 text-[0.55rem] tracking-[0.3em] text-ink/45 uppercase transition-colors hover:text-gold"
-      >
-        <Instagram className="size-3.5" aria-hidden />
-        <span>
-          Crafted by <span className="text-ink/60">Zetron Tech</span>
-        </span>
-      </a>
+      {!(typeof location !== 'undefined' && location.hostname.endsWith('.vercel.app')) && (
+        <a
+          href="https://www.instagram.com/zetron.tech"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Zetron Tech on Instagram"
+          className="mt-10 inline-flex items-center justify-center gap-2 text-[0.55rem] tracking-[0.3em] text-ink/45 uppercase transition-colors hover:text-gold"
+        >
+          <Instagram className="size-3.5" aria-hidden />
+          <span>
+            Crafted by <span className="text-ink/60">Zetron Tech</span>
+          </span>
+        </a>
+      )}
     </footer>
   )
 }
